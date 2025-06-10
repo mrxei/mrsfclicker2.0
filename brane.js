@@ -1,4 +1,4 @@
-let money = 0;
+let money = 0; 
 let clickValue = 1;
 let cursorGeneration = 0;
 
