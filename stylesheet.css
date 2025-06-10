@@ -7,6 +7,9 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,77 +50,69 @@ body {
   background-color: #00aaff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  overflow: hidden;
-  width: 400px; 
-  height: 400px; 
-}
-
-#click-btn img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 5px;
+  width: 700px;
+  height: 700px;
+  transition: 0.3s ease;
 }
 
 #click-btn:hover {
-  background-color: #0092db;
+  background-color: #0088cc;
+}
+
+#click-btn img { /* Same here for height */
+  height: 700px /* Ensure it stays in proportion */ /* Round the corners of the click image */
 }
 
 #right-side {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  width: 45%; 
-  margin-top: 40px; 
+  width: 45%;
+  padding-left: 30px;
 }
 
-#right-side h3 {
-  margin-top: 20px;
-  color: #333;
+#upgrades, #idle-generator {
+  margin-bottom: 20px;
 }
 
 .upgrade {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-  width: 100%; 
+  margin-bottom: 10px;
 }
 
 .upgrade button {
   font-size: 16px;
-  padding: 10px;
-  margin-left: 10px;
-  background-color: #4caf50;
+  padding: 8px;
+  background-color: #673ab7;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .upgrade button:hover {
-  background-color: #439745;
+  background-color: #512da8;
 }
 
-.upgrade p {
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.upgrade-img {
-  height: 40px;
-  margin-right: 10px;
+#prestige-btn {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-#glasses-img, #mustache-img, #computer-img, #cursor-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+#prestige-btn:hover {
+  background-color: #f57c00;
 }
 
+/* Make sure all upgrade images have a max width and height */
+.upgrade-img {
+  max-width: 50px; /* Limit the size of the images */
+  max-height: 50px;
+  object-fit: contain; /* Ensure the image scales correctly */
+  margin-right: 10px; /* Space between the image and the button text */
+}
